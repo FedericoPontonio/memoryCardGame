@@ -1,0 +1,27 @@
+
+img {
+  width: 20vh;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 98vh;
+}
+
+.scoreBoard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  font-size: 29px;
+  font-weight: 800;
+  margin: 2vh;
+
+}
+
+.caption {
+  margin: 6vh;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+}

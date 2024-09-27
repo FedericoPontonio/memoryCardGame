@@ -1,0 +1,88 @@
+/* Card.css */
+
+.Card {
+  border-radius: 30px;
+  border: solid black;
+  height: 24vh;
+  width: 20vh;
+  perspective: 800px;
+  margin: 10px;
+  animation: setVisible 0.5s ease-in-out forwards;
+}
+
+.CardInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease-in-out;
+}
+
+.animate {
+  animation: setHidden 0.5s ease-in-out forwards;
+}
+
+.frontFace,
+.backFace {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 30px;
+}
+
+.frontFace {
+  /* Front face styles */
+  background-color: rgb(168, 180, 243);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.backFace {
+  /* Back face styles */
+  background-color: rgb(193, 240, 240);
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes setHidden {
+  0% {
+    transform: rotateY(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotateY(180deg);
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes setVisible {
+    0% {
+      transform: rotateY(180deg);
+      opacity: 0;
+      visibility: hidden;
+    }
+    100% {
+      transform: rotateY(0deg);
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+/* Additional styles */
+.pokèmonName {
+  font-size: 20px;
+  font-family: sans-serif;
+  border-radius: 90px;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+}
+
+.Card:hover {
+  cursor: pointer;
+  /* Optional hover effect */
+}

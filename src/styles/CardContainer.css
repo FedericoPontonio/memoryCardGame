@@ -1,0 +1,10 @@
+.CardContainer {
+    display: grid;
+    height: 90%;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 3%;
+    justify-content: space-between;
+    justify-items: center;
+}
+
